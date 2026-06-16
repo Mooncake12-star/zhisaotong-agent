@@ -1,6 +1,6 @@
 # 智扫通 AI Agent
 
-基于 **ReAct Agent + RAG + MCP + FastAPI + Redis + SQL ** 的智能客服助手，专为扫地机器人/扫拖一体机器人场景打造。
+基于 **ReAct Agent + RAG + MCP + FastAPI + Redis + SQL** 的智能客服助手，专为扫地机器人/扫拖一体机器人场景打造。
 
 ## 技术栈
 
@@ -14,6 +14,8 @@
 | RAG 检索 | Ensemble Retrieval (向量+BM25) + Query Rewrite + Reranker |
 | 多模态 | Qwen-VL-Max 图片分析 |
 | 大模型 | Qwen3-Max (DashScope) |
+| 数据库 | SQLite |
+| 缓存 | Redis |
 | PDF 报告 | fpdf2 |
 
 ## 快速开始
@@ -77,11 +79,15 @@ docker compose up -d
 │   ├── deps.py               # Agent 生命周期管理
 │   └── schemas.py            # Pydantic 数据模型
 ├── rag/
-│   ├── rag_service.py        # 企业级 RAG 服务 (重排序+上下文压缩)
+│   ├── rag_service.py        # RAG 服务 (重排序+上下文压缩)
 │   └── vector_store.py       # ChromaDB 向量存储
 ├── config/                   # YAML 配置文件
 ├── prompts/                  # 提示词模板
 ├── data/                     # 知识库原始数据
+├── db/
+│   └── database.py           # SQLite 会话存储
+├── cache/
+│   └── redis_client.py       # Redis 缓存客户端
 ├── model/
 │   └── factory.py            # 模型工厂 (ChatTongyi / Embedding)
 ├── utils/                    # 工具模块
