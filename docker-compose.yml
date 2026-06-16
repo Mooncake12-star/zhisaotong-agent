@@ -1,0 +1,29 @@
+services:
+  redis:
+    image: redis
+    container_name: zhisaotong-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        - HTTP_PROXY=${HTTP_PROXY:-}
+        - HTTPS_PROXY=${HTTPS_PROXY:-}
+        - NO_PROXY=${NO_PROXY:-}
+    container_name: zhisaotong-agent
+    ports:
+      - "8000:8000"
+    environment:
+      - DASHSCOPE_API_KEY=${DASHSCOPE_API_KEY}
+      - REDIS_HOST=redis
+      - NO_PROXY=localhost,127.0.0.1
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+    restart: unless-stopped
+    command: uvicorn fastapi_app.main:app --host 0.0.0.0 --port 8000 --reload

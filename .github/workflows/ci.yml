@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio httpx
+
+      - name: Check Python syntax
+        run: |
+          python -m py_compile app.py
+          python -m py_compile agent/react_agent.py
+          python -m py_compile agent/tools/middleware.py
+          python -m py_compile fastapi_app/main.py
+          python -m py_compile rag/rag_service.py
+          python -m py_compile rag/vector_store.py
+          python -m py_compile model/factory.py
+
+      - name: Run tests
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+        run: |
+          pytest tests/ -v --tb=short -x

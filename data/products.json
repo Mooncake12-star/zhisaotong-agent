@@ -1,0 +1,106 @@
+[
+  {
+    "id": "robovac_x1",
+    "brand": "智扫",
+    "name": "智扫 X1 Pro",
+    "type": "扫地机器人",
+    "price": 2499,
+    "specs": {
+      "suction": "5000Pa",
+      "battery": "5200mAh",
+      "dustbin": "400ml",
+      "navigation": "激光导航",
+      "noise": "65dB"
+    },
+    "features": ["LDS激光导航", "5000Pa大吸力", "自动回充", "APP远程控制", "虚拟墙"],
+    "suitable_for": ["小户型（<90㎡）", "硬地板/瓷砖"],
+    "rating": 4.5
+  },
+  {
+    "id": "robovac_x2",
+    "brand": "智扫",
+    "name": "智扫 X2 Max",
+    "type": "扫地机器人",
+    "price": 3299,
+    "specs": {
+      "suction": "6000Pa",
+      "battery": "6400mAh",
+      "dustbin": "500ml",
+      "navigation": "dToF导航",
+      "noise": "62dB"
+    },
+    "features": ["dToF精准避障", "6000Pa鲸吸", "热风烘干抹布", "AI识别100+种障碍物", "实时视频巡航"],
+    "suitable_for": ["中户型（90-140㎡）", "瓷砖/木地板"],
+    "rating": 4.7
+  },
+  {
+    "id": "robovac_x3",
+    "brand": "智扫",
+    "name": "智扫 X3 Ultra",
+    "type": "扫拖一体机器人",
+    "price": 4599,
+    "specs": {
+      "suction": "8000Pa",
+      "battery": "6800mAh",
+      "dustbin": "600ml",
+      "water_tank": "300ml",
+      "navigation": "3D结构光+激光",
+      "noise": "60dB"
+    },
+    "features": ["8000Pa飓风吸力", "3D结构光避障", "自动洗拖布+热风烘干", "自动集尘（60天）", "上下水接入", "地毯识别+自动抬拖布"],
+    "suitable_for": ["大户型（>140㎡）", "混合地面", "有宠物家庭"],
+    "rating": 4.8
+  },
+  {
+    "id": "mopbot_m1",
+    "brand": "智扫",
+    "name": "智扫 M1 Lite",
+    "type": "扫拖一体机器人",
+    "price": 1899,
+    "specs": {
+      "suction": "3500Pa",
+      "battery": "4800mAh",
+      "dustbin": "350ml",
+      "water_tank": "200ml",
+      "navigation": "陀螺仪导航",
+      "noise": "68dB"
+    },
+    "features": ["3500Pa吸力", "陀螺仪规划", "电控水箱", "APP控制", "防跌落"],
+    "suitable_for": ["小户型（<90㎡）", "预算有限用户"],
+    "rating": 4.2
+  },
+  {
+    "id": "mopbot_m2",
+    "brand": "智扫",
+    "name": "智扫 M2 Smart",
+    "type": "扫拖一体机器人",
+    "price": 2799,
+    "specs": {
+      "suction": "4500Pa",
+      "battery": "5200mAh",
+      "dustbin": "400ml",
+      "water_tank": "250ml",
+      "navigation": "激光导航",
+      "noise": "64dB"
+    },
+    "features": ["激光导航", "4500Pa吸力", "Y字形拖地", "小爱/天猫精灵语音控制", "定时清扫"],
+    "suitable_for": ["中户型（90-120㎡）", "有宠物家庭"],
+    "rating": 4.4
+  },
+  {
+    "id": "window_w1",
+    "brand": "智扫",
+    "name": "智扫 W1 擦窗机器人",
+    "type": "擦窗机器人",
+    "price": 1299,
+    "specs": {
+      "suction": "2800Pa",
+      "battery": "3000mAh",
+      "navigation": "路径规划",
+      "noise": "70dB"
+    },
+    "features": ["2800Pa吸附", "自动喷水", "边缘检测", "UPS断电保护", "双层清洁"],
+    "suitable_for": ["高楼擦窗", "大面积玻璃"],
+    "rating": 4.3
+  }
+]

@@ -1,0 +1,36 @@
+# API keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Vector DB
+chroma_db/
+rag/chroma_db/
+*.db
+
+# Logs
+logs/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# MD5 cache
+md5.text
+
+# Uploaded images
+uploads/
+
+#test
+.pytest_cache/
+
+# Personal notes
+问题记录
+项目技术总结.md
