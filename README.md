@@ -1,6 +1,6 @@
 # 智扫通 AI Agent
 
-基于 **ReAct Agent + RAG + MCP +FastAPI ** 的智能客服助手，专为扫地机器人/扫拖一体机器人场景打造。
+基于 **ReAct Agent + RAG + MCP + FastAPI + Redis + SQL ** 的智能客服助手，专为扫地机器人/扫拖一体机器人场景打造。
 
 ## 技术栈
 
